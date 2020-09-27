@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration-line: none;
+    background-color: #ffd5cd;
+}
+
+/*
+:root{
+    --color1: #ffd5cd
+    --color2: #efbbcf
+    --color3: #c3aed6
+    --color4: #8675a9
+}
+*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.master{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.header{
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(media/floreado.jpg);
+    background-position: center center;
+    justify-content: center;
+    min-height: 250px;
+    height: max-content;
+}
+.menu{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+    height: max-content;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    border: 2px none #fff;
+}
+.jdl{
+    flex: 1 1 auto;
+    font-size: url(media/Spinnenkop\ DEMO.otf);
+    /*  REVISAR POR QUE NO CARGA LA FUENTE  
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;*/
+    font-size: 48px;
+    background-color: transparent;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+.nav{
+    display: flex;
+    flex: 1 1 auto;
+    background-color: transparent;
+}
+.nav a{
+    background-color: #8675a98a;
+    color: #582eaa ;
+    font-size: 1em;
+    padding: 2px 20px;
+    letter-spacing: 2px;
+    margin-top: 1em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    align-self: center;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.nav a:hover{
+    background-color: #c3aed6;
+    padding: 6px 30px;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    
+}
+.nav a:active{
+    color: #71409e;
+}
+@font-face { font-family: spinnenkop; 
+    src: url(media/Spinnenkop\ DEMO.otf); } 
+
+.fonts{
+    font-family: spinnenkop;
+    font-size: 100px ;
+}
+.jdl a{
+    color: #71409e ;
+    background-color: transparent;
+    font-family: url(media/Spinnenkop\ DEMO.otf);
+}
+.social{
+    flex:1 1 auto;
+    display: flex;
+}
+
+.aside{
+    /*background: #f73f52;*/
+    flex:1 1 auto;
+    margin: 10px 5px 10px 0px;
+    max-width: 25%;
+}
+
+.container-grl{
+    display: grid;
+    overflow: hidden;
+    height: 200px;
+    background-color: #efbbcf;
+    grid-template-rows: [row1] 2fr [row2] 1fr;
+    grid-template-columns: [col1] 2fr [col2]1fr [col3] 0fr [col4] 0fr;
+}
+.container-img{
+    background-image: url(media/floreado.jpg);
+    grid-column-end: col3;
+    grid-column-start: col1;
+    overflow: hidden;
+    width: 100%;
+    flex-wrap: wrap ;
+
+}
+
+.section{
+    display: flex;
+    flex-flow: row;
+    background-color: #efbbcf ;
+    border-radius: 20px;
+    z-index: 0;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+.section *{
+    background-color: transparent;
+    padding: 1%;
+}
+p{
+  margin: 2%;  
+}
+
+.aside-back {
+    background-color: transparent ;
+    background-image: url(media/pub.jpg);
+    border-radius: 10px;
+    background-position: 4% 4% ;
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+    z-index: 1;
+    padding: 1%;
+}
+.aside-back p,
+ h1{
+    text-align: center;
+    background-color: transparent;
+
+}
+.frame{
+    display: flex;
+    flex-flow: column wrap;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.map{
+    flex-flow: row;
+}
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+footer p{
+    justify-self: center;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: 3fr 1fr;    
+}
+.formulario aside{
+    width: 100%;
+}
+
+.f{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-content: flex-start;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    text-align: right;
+    padding: 2%;
+}
+input,label,select,button{
+    margin: 1%;
+    padding: 1%;
+    align-self: center;
+}
+
+input,select,textarea,button{
+    background-color: rgba(245, 245, 245, 0.904) !important; 
+}
+input:focus{
+    background-color: rgb(226, 241, 207);
+}
+button{
+    justify-self: center;
+}
+
+.contacto{
+    margin: 0px 2%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    
+}
+/*jazmindeluna.formosa@gmail.com*/
+
+.contacto img{
+    overflow: hidden;
+    max-width: 50%;
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
+.div-img{
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    align-self: center;
+}
+
+div h2{
+    font-weight: bold;
+}
+
+a,h2{
+    color: #582eaa;
+}
+
+@media all and (max-width: 800px){
+    .master,.header,.frame,.section{
+        flex-flow: column nowrap;
+    }
+    footer{
+        display: inline;
+    }
+    .nav, .nav a{
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 15px 10px;
+        
+    margin-bottom: 5px;
+}   
+    .header,.aside-back{
+        width: 100%;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    a{
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        padding: 5px auto 5px;
+        text-decoration: none;
+    }
+    h1{font-size: 20px;}
+    p,span{font-size: 18px;}
+}
+@media all and (max-width: 600px){
+    .master,.header,.frame,.section{
+        flex-flow: column nowrap;
+    }
+    footer{
+        display: inline;
+    }
+    .nav, .nav a{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    margin-bottom: 5px;
+}   
+    .header,.aside-back{
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    a{
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        padding: 5px auto 5px;
+        text-decoration: none;
+    }
+	h1{font-size: 20px;}
+}
